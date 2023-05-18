@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <h1>Password Generator</h1>
+    <div class="container">
+      <header class="password__block">
+        <span class="password">P4$5W0rD!</span>
+        <img
+          class="copy"
+          onclick="copyPass()"
+          src="/images/icon-copy.svg"
+          alt="icon copy"
+        />
+      </header>
+      <main>
+        <div class="character__length">
+          <p>Character Length</p>
+          <span class="length">10</span>
+        </div>
+        <div class="slider">
+          <input
+            type="range"
+            min="1"
+            max="20"
+            value="10"
+            class="slider__bar"
+            id="myRange"
+          />
+        </div>
+        <form action="">
+          <div class="label1">
+            <input
+              type="checkbox"
+              id="uppercase"
+              name="uppercase"
+              value="UppercaseLetters"
+              onclick="checkBoxUpper()"
+            />
+            <label for="uppercase"> Include Uppercase Letters</label>
+          </div>
+          <div class="label2">
+            <input
+              type="checkbox"
+              id="lowercase"
+              name="lowercase"
+              value="LowercaseLetters"
+              onclick="checkBoxLower()"
+            />
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
+          <div class="label3">
+            <input
+              type="checkbox"
+              id="numbers"
+              name="numbers"
+              value="Numbers"
+              onclick="checkBoxNumbers()"
+            />
+            <label for="numbers"> Include Numbers</label>
+          </div>
+          <div class="label4">
+            <input
+              type="checkbox"
+              id="symbols"
+              name="symbols"
+              value="Symbols"
+              onclick="checkBoxSymbols()"
+            />
+            <label for="symbols">Include Symbols</label>
+          </div>
+        </form>
+        <section class="bottom">
+          <div class="strength__generate">
+            <span class="str">strength</span>
+            <span class="length__str">medium</span>
+            <div class="bars">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+              <div class="bar4"></div>
+            </div>
+          </div>
+          <button class="button">
+            generate <img src="/images/icon-arrow-right.svg" alt="" />
+          </button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
