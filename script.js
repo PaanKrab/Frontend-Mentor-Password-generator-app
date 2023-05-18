@@ -68,7 +68,7 @@ const copyPass = async function () {
 
 copy.addEventListener("click", function () {
   Swal.fire({
-    title: "Copy to clipboard!",
+    title: "Copied to clipboard!",
     background: "rgba(24, 23, 31, 1)",
     color: "#E6E5EA",
     confirmButtonText: "OK!",
