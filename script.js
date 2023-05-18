@@ -1,4 +1,4 @@
-const mq = window.matchMedia("(max-width: 1200px)");
+const mqMobile = window.matchMedia("(max-width: 1200px)");
 const password = document.querySelector(".password");
 const copy = document.querySelector("img");
 const lengthNumber = document.querySelector(".length");
@@ -197,13 +197,13 @@ button.addEventListener("click", function () {
     lengthStr.style.left = "335px";
   }
 
-  if (mq.matches && lengthStr.innerHTML.length >= 8) {
+  if (mqMobile.matches && lengthStr.innerHTML.length >= 8) {
     lengthStr.style.left = "130px";
   }
-  if (lengthStr.innerHTML.length <= 8) {
+  if (mqMobile.matches && lengthStr.innerHTML.length <= 8) {
     lengthStr.style.left = "155px";
   }
-  if (mq.matches && lengthStr.innerHTML.length === 4) {
+  if (mqMobile.matches && lengthStr.innerHTML.length === 4) {
     lengthStr.style.left = "170px";
   }
 });
